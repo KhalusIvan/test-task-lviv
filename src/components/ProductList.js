@@ -12,9 +12,7 @@ export const ProductList = () => {
 
     useEffect(()=>{
         let productArray = productList.slice(0)
-        console.log(sort.field)
         productArray.sort((a, b) => {
-            console.log(b[sort.field])
             if(sort.how === "asc") {
                 if(a[sort.field] < b[sort.field]) { return -1; }
                 else { return 1; }
@@ -34,8 +32,6 @@ export const ProductList = () => {
         })
         const status = await result.status
         const products = await result.json()
-        console.log(status)
-        console.log(products)
         if (status === 200 || status === 201) {
             setProductList(products)
         } else if (status === 400) {

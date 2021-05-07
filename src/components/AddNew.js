@@ -31,8 +31,6 @@ export const AddNew = (props) => {
         })
         const status = await result.status
         const products = await result.json()
-        console.log(status)
-        console.log(products)
         if (status === 200 || status === 201) {
             let productArray = props.productList.slice(0)
             productArray.push(products)

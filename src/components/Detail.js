@@ -62,7 +62,6 @@ export const Detail = () => {
         const status = await result.status
         const products = await result.json()
         if (status === 200 || status === 201) {
-            console.log(products)
             history.push('/')
         } else if (status === 400) {
             alert("Не знайдена сторінка")
