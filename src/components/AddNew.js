@@ -18,8 +18,11 @@ export const AddNew = () => {
                 descripion:descripion,
                 count:count,
                 width:width,
-                height:height,
-                weight:weight
+                size:{
+                    height:height,
+                    weight:weight
+                },
+                comments:[]
             }
         })
         const status = await result.status
@@ -72,7 +75,7 @@ export const AddNew = () => {
                 </form>
                 </div>
                 <div className="modal-footer">
-                    <button type="button" className="btn btn-primary" onClick={()=>{save()}}>Зберегти</button>
+                    <button type="button" className="btn btn-primary" onClick={()=>{save()}} data-bs-dismiss="modal">Зберегти</button>
                     <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
                 </div>
                 </div>

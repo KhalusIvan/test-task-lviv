@@ -52,7 +52,10 @@ export const ProductList = () => {
                             <GenerateProductList />
                         </tbody>
                     </table>
-                    <button className="position-fixed" style={{bottom:"5%", right:"5%"}}> addNew </button>
+                    <button type="button" className="position-fixed" style={{bottom:"5%", right:"5%"}} data-bs-toggle="modal" data-bs-target="#addModal">
+                        addNew
+                    </button>
+                    <AddNew />
                 </>
             ) : (
                 <>
