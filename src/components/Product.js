@@ -10,7 +10,7 @@ export const Product = (props) => {
     return (
         <tr>
             <th>
-                <img alt="product__photo" src={product.imageUrl} />
+                <img className="w-25" alt="product__photo" src={product.imageUrl} />
             </th>
             <td>{product.name}</td>
             <td>{product.description}</td>

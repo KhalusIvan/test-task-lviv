@@ -1,36 +1,42 @@
 import React, {useState} from 'react'
 
-export const AddNew = () => {
+export const AddNew = (props) => {
     const [name, setName] = useState('')
     const [url, setUrl] = useState('')
-    const [descripion, setDescripion] = useState('')
+    const [description, setDescription] = useState('')
     const [count, setCount] = useState('')
     const [width, setWidth] = useState('')
     const [height, setHeight] = useState('')
     const [weight, setWeight] = useState('')
 
     async function save() {
+        let sizeStr = {
+                height:height,
+                width:width
+            }
         const result = await fetch('https://60955b88e806f60017116688.mockapi.io/api/v1/products', {
             method: 'POST',
-            body: {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
                 imageUrl:url,
                 name:name,
-                descripion:descripion,
+                description:description,
                 count:count,
-                width:width,
-                size:{
-                    height:height,
-                    weight:weight
-                },
+                weight:weight,
+                size:sizeStr,
                 comments:[]
-            }
+            })
         })
         const status = await result.status
         const products = await result.json()
         console.log(status)
         console.log(products)
         if (status === 200 || status === 201) {
-            //setProductList(products)
+            let productArray = props.productList.slice(0)
+            productArray.push(products)
+            props.setProductList(productArray)
         } else if (status === 400) {
             alert("Не знайдена сторінка")
         } else {
@@ -64,7 +70,7 @@ export const AddNew = () => {
                             </div>
                     <div className="mb-3">
                         <label htmlFor="description" className="form-label">Опис</label>
-                        <input type="text" id="description" className="form-control" placeholder="Введіть опис продукту" value={descripion} onChange={(e)=>{setDescripion(e.target.value)}} />
+                        <input type="text" id="description" className="form-control" placeholder="Введіть опис продукту" value={description} onChange={(e)=>{setDescription(e.target.value)}} />
                     </div>
                     Розміри
                     <div className="mb-3 d-flex justify-content-between w-100">
