@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/test-task-lviv/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/test-task-lviv/static/js/main.8422650d.chunk.js",
+    "main.js.map": "/test-task-lviv/static/js/main.8422650d.chunk.js.map",
+    "runtime-main.js": "/test-task-lviv/static/js/runtime-main.f712a721.js",
+    "runtime-main.js.map": "/test-task-lviv/static/js/runtime-main.f712a721.js.map",
+    "static/css/2.800be05e.chunk.css": "/test-task-lviv/static/css/2.800be05e.chunk.css",
+    "static/js/2.82c84d99.chunk.js": "/test-task-lviv/static/js/2.82c84d99.chunk.js",
+    "static/js/2.82c84d99.chunk.js.map": "/test-task-lviv/static/js/2.82c84d99.chunk.js.map",
+    "index.html": "/test-task-lviv/index.html",
+    "static/css/2.800be05e.chunk.css.map": "/test-task-lviv/static/css/2.800be05e.chunk.css.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/test-task-lviv/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.82c84d99.chunk.js.LICENSE.txt": "/test-task-lviv/static/js/2.82c84d99.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f712a721.js",
+    "static/css/2.800be05e.chunk.css",
+    "static/js/2.82c84d99.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.8422650d.chunk.js"
+  ]
+}
